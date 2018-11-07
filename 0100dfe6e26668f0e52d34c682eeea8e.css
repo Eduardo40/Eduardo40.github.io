@@ -107,7 +107,7 @@ nav .container-box {
 }
 #about-me h2,
 #about-me h3 {
-  font-size: 2rem;
+  font-size: 3rem;
   color: #fff;
 }
 .about-text {
@@ -143,16 +143,16 @@ nav .container-box {
   flex-direction: column;
 }
 #showcase h1 {
-  letter-spacing: 1.5px;
+  letter-spacing: 1.3px;
   color: #fff;
-  font-weight: 200;
-  font-size: 3rem;
+  font-weight: 600;
+  font-size: 3.1rem;
   margin-bottom: 0;
 }
 #showcase .content img {
-  margin: 2.2vh auto;
-  width: 13rem;
-  border-radius: 5%;
+  margin: 1.4vh auto;
+  width: 18rem;
+  border-radius: 3%;
 }
 p:first-child {
   font-size: 2rem;
