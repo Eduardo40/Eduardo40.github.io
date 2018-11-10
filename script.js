@@ -87,11 +87,19 @@ function addSmoothScrollEvent(e) {
 function onloadHandler() {
   setProjects();
   setNavbar();
+  setYearDate();
   dropdownButtonHandler();
 }
 
 function onResizeHandler() {
   setNavbar();
+}
+
+function setYearDate() {
+  const spanYear = document.querySelector(".year");
+  const date = new Date();
+  const year = date.getFullYear();
+  spanYear.textContent = year;
 }
 
 window.addEventListener("load", onloadHandler);
