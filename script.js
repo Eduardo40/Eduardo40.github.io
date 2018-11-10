@@ -37,10 +37,13 @@ function setNavbar(e) {
   const dropdown = document.querySelector(".dropdown-nav");
   const navItemsLarge = document.querySelector(".navigation-items ul");
   const dropDownButton = document.querySelector(".control");
+  const threeStars = document.querySelector(".ico");
   if (this.innerWidth <= 768) {
+    threeStars.classList.add("hidden");
     dropDownButton.classList.remove("hidden");
     navItemsLarge.classList.add("hidden");
   } else {
+    threeStars.classList.remove("hidden");
     dropDownButton.classList.add("hidden");
     dropdown.classList.remove("showDropDown");
   }
