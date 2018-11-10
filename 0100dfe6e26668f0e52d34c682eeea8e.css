@@ -87,8 +87,7 @@ nav .container-box {
   list-style-type: none;
 }
 .dropdown-nav li {
-  display: flex;
-  justify-content: space-around;
+  margin: 5px 5px;
 }
 .dropdown-nav a {
   padding: 8px;
@@ -365,7 +364,7 @@ footer i {
 }
 .showDropDown {
   transition: all 0.26s;
-  height: 11em;
+  height: 9em;
 }
 .hideDropDown {
   transition: all 0.26s;
