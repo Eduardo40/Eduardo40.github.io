@@ -91,10 +91,6 @@ function onResizeHandler() {
   setNavbar();
 }
 
-function onClickHandler() {
-  addSmoothScrollEvent();
-}
-
-window.addEventListener("resize", onResizeHandler);
 window.addEventListener("load", onloadHandler);
-window.addEventListener("click", onClickHandler);
+window.addEventListener("resize", onResizeHandler);
+window.addEventListener("click", addSmoothScrollEvent);
