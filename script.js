@@ -84,17 +84,6 @@ function addSmoothScrollEvent(e) {
       .scrollIntoView({ behavior: "smooth", block: "start" });
   }
 }
-function onloadHandler() {
-  setProjects();
-  setNavbar();
-  setYearDate();
-  dropdownButtonHandler();
-}
-
-function onResizeHandler() {
-  setNavbar();
-}
-
 function setYearDate() {
   const spanYear = document.querySelector(".year");
   const date = new Date();
@@ -102,6 +91,21 @@ function setYearDate() {
   spanYear.textContent = year;
 }
 
+function onloadHandler(e) {
+  setProjects();
+  setNavbar();
+  setYearDate();
+  dropdownButtonHandler();
+}
+
+function onResizeHandler(e) {
+  setNavbar();
+}
+
+function clickHandler(e) {
+  addSmoothScrollEvent(e);
+}
+
 window.addEventListener("load", onloadHandler);
 window.addEventListener("resize", onResizeHandler);
-window.addEventListener("click", addSmoothScrollEvent);
+window.addEventListener("click", clickHandler);
