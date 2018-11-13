@@ -131,12 +131,13 @@ nav .container-box {
 }
 .ico {
   flex-grow: 3.8;
-  color: #ff0;
+  font-size: 1.5rem;
+  color: rgb(240, 255, 24);
 }
 #showcase {
   z-index: 0;
-  height: 95vh;
-  background-image: url(4a752a25b6986ba67dc36581afcbcd36.jpg);
+  height: 100vh;
+  background-image: url(codeSlika.jpg);
   background-size: cover;
   position: relative;
   flex-direction: column;
@@ -149,9 +150,9 @@ nav .container-box {
   margin-bottom: 0;
 }
 #showcase .content img {
-  margin: 1.4vh auto;
-  width: 18rem;
-  border-radius: 3%;
+  margin: 1.7vh auto;
+  width: 20rem;
+  border-radius: 2%;
 }
 p:first-child {
   font-size: 2rem;
@@ -161,7 +162,7 @@ p:first-child {
 }
 #showcase .overlay {
   z-index: -1;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8);
   position: absolute;
   height: 100%;
   width: 100%;
@@ -223,12 +224,14 @@ p:first-child {
 }
 #project-list .project a.gold {
   color: gold;
+  font-size: 1.4rem;
 }
 #project-list .project a.gray {
   color: #a9a9a9;
 }
 #project-list .project h3 a {
   color: gold;
+  font-size: 1.6rem;
 }
 #contact {
   display: flex;
@@ -296,7 +299,7 @@ footer i {
 #about-me,
 #projects,
 #skills {
-  padding-top: 50px;
+  padding-top: 100px;
 }
 .fa-plus-circle {
   padding: 2px;
