@@ -112,6 +112,7 @@ nav .container-box {
 .about-text {
   color: #fff;
   font-size: 1.8rem;
+  text-align: center;
 }
 .about-text h3 {
   color: #fff;
@@ -149,6 +150,11 @@ nav .container-box {
   font-size: 3.1rem;
   margin-bottom: 0;
 }
+
+.image-text {
+  text-align: center;
+}
+
 #showcase .content img {
   margin: 1.7vh auto;
   width: 20rem;
@@ -236,7 +242,7 @@ p:first-child {
 #contact {
   display: flex;
   position: relative;
-  height: 92vh;
+  height: 93vh;
   background-image: url(c21d01d31b656ae8e1a008e904aaa17a.jpeg);
   background-size: cover;
   background-position: 50%;
@@ -299,7 +305,7 @@ footer i {
 #about-me,
 #projects,
 #skills {
-  padding-top: 100px;
+  padding-top: 70px;
 }
 .fa-plus-circle {
   padding: 2px;
@@ -325,6 +331,16 @@ footer i {
   }
 }
 @media (max-width: 768px) {
+  #about-me,
+  #projects,
+  #skills {
+    padding-top: 50px;
+  }
+
+  #showcase .content img {
+    width: 15rem;
+  }
+
   #skill-list {
     margin: 17px auto;
     text-align: center;
@@ -343,13 +359,13 @@ footer i {
     width: 90%;
   }
   .me-list p {
-    font-size: medium;
-  }
-  .me-list ul {
     font-size: 1.3rem;
   }
+  .me-list ul {
+    font-size: 1.5rem;
+  }
   #skill-list div {
-    font-size: 17px;
+    font-size: 1.1rem;
     width: 100%;
   }
   .contact-ways {
@@ -359,6 +375,7 @@ footer i {
     margin: 0;
   }
 }
+
 .hidden {
   display: none;
 }
