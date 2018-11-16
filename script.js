@@ -7,7 +7,7 @@ function displayProjects(data) {
         gitProject.html_url
       }">${gitProject.name}</a></h3>\n    <p>${
         gitProject.description
-      }</p>\n    <br />\n    <a target="_blank" class='gray' href="${
+      }</p>\n    <br />\n    <a target="_blank"  rel="noopener" class='gray' href="${
         gitProject.html_url
       }">See Code on <i class="fa fa-github fa-2x"></i></a>\n    ${
         gitProject.homepage
