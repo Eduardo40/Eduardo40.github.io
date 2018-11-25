@@ -1,6 +1,4 @@
 (function() {
-  let isClickedDropDownButton = false;
-
   function displayProjects(data) {
     const projectList = document.querySelector("#project-list");
     data.forEach(gitProject => {
@@ -37,20 +35,19 @@
   }
 
   function setNavbar(e) {
-    const mainNav = document.querySelector('.main-nav');
-    const dropDownMenu = document.querySelector('#dropdown-menu');
-    const dropDownButton = document.querySelector('.control');
+    const mainNav = document.querySelector(".main-nav");
+    const dropDownMenu = document.querySelector("#dropdown-menu");
+    const dropDownButton = document.querySelector(".control");
     if (this.innerWidth <= 768) {
-      dropDownButton.classList.remove('hidden');
-      mainNav.classList.add('hidden');
-      dropDownMenu.classList.add('showDropDown')
-      dropDownMenu.classList.remove('hidden');
+      dropDownButton.classList.remove("hidden");
+      mainNav.classList.add("hidden");
+      dropDownMenu.classList.add("showDropDown");
+      dropDownMenu.classList.remove("hidden");
     } else {
       dropDownButton.classList.add("hidden");
-      mainNav.classList.remove('hidden');
-      dropDownMenu.classList.remove('showDropDown')
-      dropDownMenu.classList.add('hidden');
-
+      mainNav.classList.remove("hidden");
+      dropDownMenu.classList.remove("showDropDown");
+      dropDownMenu.classList.add("hidden");
     }
   }
 
@@ -110,7 +107,6 @@
   }
 
   function clickHandler(e) {
-    isClickedDropDownButton = !isClickedDropDownButton;
     addSmoothScrollEvent(e);
   }
 
