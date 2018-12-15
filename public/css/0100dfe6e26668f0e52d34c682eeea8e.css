@@ -13,6 +13,9 @@ body {
 }
 .container-box {
   width: 85%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   margin: auto;
 }
 hr {
@@ -114,11 +117,6 @@ nav .container-box {
   font-size: 1.8rem;
   text-align: center;
 }
-.about-text h3 {
-  color: #fff;
-  font-size: 1.6rem;
-  padding: 12px;
-}
 .me-list p,
 .me-list ul {
   padding: 6px;
@@ -153,6 +151,8 @@ nav .container-box {
 
 .image-text {
   text-align: center;
+  margin-top: 110px;
+  margin-bottom: 10px;
 }
 
 #showcase .content img {
@@ -242,7 +242,7 @@ p:first-child {
 #contact {
   display: flex;
   position: relative;
-  height: 93vh;
+  height: 95vh;
   background-image: url("../images/c21d01d31b656ae8e1a008e904aaa17a.jpeg");
   background-size: cover;
   background-position: 50%;
@@ -253,7 +253,7 @@ p:first-child {
   background: rgba(0, 0, 0, 0.9);
   position: absolute;
   width: 100%;
-  height: 93vh;
+  height: 96vh;
   top: 0;
   left: 0;
 }
@@ -293,7 +293,13 @@ footer {
   background: #1a518b;
   text-align: center;
   padding: 2px;
+  z-index: 999;
 }
+
+footer .container-box {
+  flex-direction: row;
+}
+
 footer a {
   color: beige;
 }
@@ -315,7 +321,8 @@ footer i {
   text-decoration: none;
   color: #000;
 }
-@media (max-width: 1286px) {
+
+@media (max-width: 1920px) {
   #skill-list {
     display: flex;
     flex-direction: row;
@@ -323,11 +330,23 @@ footer i {
     align-items: center;
     flex-wrap: wrap;
   }
+
+  .image-text {
+    margin-top: 0px;
+  }
+
   #skill-list,
   #skill-list div {
     text-align: center;
   }
 }
+
+@media (max-width: 1440px){
+  .image-text {
+    margin-top: 0px;
+  }
+}
+
 @media (max-width: 768px) {
   #about-me,
   #projects,
@@ -336,7 +355,7 @@ footer i {
   }
 
   #about-me {
-    padding-top:20px;
+    padding-top:0;
   }
 
   #showcase .content img {
@@ -344,7 +363,7 @@ footer i {
   }
 
   .image-text {
-    margin-top:10px;
+    margin-top:20px;
   }
 
   #skill-list {
@@ -382,6 +401,10 @@ footer i {
   }
 }
 
+@media (max-width: 320px){
+
+}
+
 .hidden {
   display: none;
 }
@@ -389,10 +412,10 @@ footer i {
   text-align: center;
 }
 .showDropDown {
-  transition: all 0.26s;
-  height: 9em;
+  transition: all 0.20s;
+  height: 8.8em;
 }
 .hideDropDown {
-  transition: all 0.26s;
+  transition: all 0.20s;
   height: 0;
 }
