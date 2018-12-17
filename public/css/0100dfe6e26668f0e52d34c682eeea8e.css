@@ -214,7 +214,7 @@ p:first-child {
 }
 #project-list .project {
   width: 15vw;
-  background: #5d75ff;
+  background: #287eff;
   border-radius: 5px;
   margin: 10px;
   padding: 8px;
@@ -323,13 +323,6 @@ footer i {
 }
 
 @media (max-width: 1920px) {
-  #skill-list {
-    display: flex;
-    flex-direction: row;
-    margin: 2rem auto;
-    align-items: center;
-    flex-wrap: wrap;
-  }
 
   .image-text {
     margin-top: 0px;
