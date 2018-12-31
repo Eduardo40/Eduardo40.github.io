@@ -136,7 +136,7 @@ nav .container-box {
 #showcase {
   z-index: 0;
   height: 100vh;
-  background-image: url('../images/codeSlika.jpg');
+  background-image: url('../images/code-pic1.jpg');
   background-size: cover;
   position: relative;
   flex-direction: column;
@@ -243,7 +243,7 @@ p:first-child {
   display: flex;
   position: relative;
   height: 95vh;
-  background-image: url("../images/c21d01d31b656ae8e1a008e904aaa17a.jpeg");
+  background-image: url("../images/code-pic2.jpg");
   background-size: cover;
   background-position: 50%;
   flex-direction: column;
