@@ -18,7 +18,8 @@
             : ""
         }\n  `),
         projectList.appendChild(div);
-    });
+      });
+      openNewWindow();
   }
   async function getRepos() {
     try {
@@ -113,4 +114,20 @@
   window.addEventListener("load", onloadHandler);
   window.addEventListener("resize", onResizeHandler);
   window.addEventListener("click", clickHandler);
+
+  function openNewWindow(href){
+    const projectData = document.querySelector("#project-list");
+    if(projectData){
+      projectData.addEventListener("click",function(e) {
+        const href = e.target.href;
+        window.open(href,"_blank");
+      })
+    }
+    const contatWaysLiks = document.querySelector(".contact-ways");
+    contatWaysLiks.addEventListener("click",function(e) {
+      const href = e.target.parentElement.href;
+      window.open(href,"_blank");
+    })   
+  };
+
 })();
