@@ -1,6 +1,9 @@
 (function() {
-  function displayProjects(data) {
+  function displayProjects(data = []) {
     const projectList = document.querySelector("#project-list");
+    if(data.length === 0){
+      projectList.innerHTML = '<h2>No projects loaded...<h2>'
+    }
     data.forEach(gitProject => {
       const div = document.createElement("div");
       div.setAttribute("class", "project"),
