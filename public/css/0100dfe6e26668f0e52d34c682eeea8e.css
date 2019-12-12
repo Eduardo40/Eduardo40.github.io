@@ -135,7 +135,6 @@ nav .container-box {
 }
 #showcase {
   z-index: 0;
-  height: 100vh;
   background-image: url('../images/code-pic1.jpg');
   background-size: cover;
   position: relative;
