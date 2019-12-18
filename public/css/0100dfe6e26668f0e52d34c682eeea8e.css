@@ -308,7 +308,7 @@ footer i {
 #about-me,
 #projects,
 #skills {
-  padding-top: 70px;
+  padding-top: 35px;
 }
 .fa-plus-circle {
   padding: 2px;
@@ -338,7 +338,6 @@ footer i {
     margin-top: 0px;
   }
 }
-
 @media (max-width: 768px) {
   #about-me,
   #projects,
