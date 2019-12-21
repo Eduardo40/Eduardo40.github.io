@@ -109,7 +109,7 @@ nav .container-box {
 }
 #about-me h2,
 #about-me h3 {
-  font-size: 2.7rem;
+  font-size: 2rem;
   color: #fff;
 }
 .about-text {
@@ -157,7 +157,7 @@ nav .container-box {
 #showcase .content img {
   margin: 1.7vh auto;
   width: 20rem;
-  border-radius: 2%;
+  border-radius: 3%;
 }
 p:first-child {
   font-size: 2rem;
