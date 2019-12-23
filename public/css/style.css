@@ -410,3 +410,9 @@ footer i {
   transition: all 0.20s;
   height: 0;
 }
+#project-list h3 .underline:hover{
+  text-decoration: underline;
+}
+#project-list .project a.gold:hover {
+  text-decoration: underline;
+}

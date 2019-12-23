@@ -1,28 +1,21 @@
 (function() {
   function displayProjects(data = []) {
     const projectList = document.querySelector("#project-list");
-    if(data.length === 0){
-      projectList.innerHTML = '<h2>No projects loaded...<h2>'
+    if (data.length === 0) {
+      projectList.innerHTML = "<h2>No projects loaded...<h2>";
     }
     data.forEach(gitProject => {
       const div = document.createElement("div");
       div.setAttribute("class", "project"),
-        (div.innerHTML = `\n    <h3><a target="_blank" href="${
-          gitProject.html_url
-        }">${gitProject.name}</a></h3>\n    <p>${
-          gitProject.description
-        }</p>\n    <br />\n    <a target="_blank"  rel="noopener" class='gray' href="${
-          gitProject.html_url
-        }">See Code on <i class="fa fa-github fa-2x"></i></a>\n    ${
-          gitProject.homepage
-            ? "<br /><a class=\"gold\" target='_blank' href=" +
-              `${gitProject.homepage}` +
-              ">See Live</a>"
+        (div.innerHTML = `\n    
+        <h3><a class='underline' target="_blank" href="${gitProject.html_url}">${gitProject.name}</a></h3>\n
+        <p>${ gitProject.description}</p>\n
+        ${gitProject.homepage ? "<br /><a class=\"gold\" target='_blank' href=" + `${gitProject.homepage}` + ">See Live</a>"
             : ""
-        }\n  `),
+        }`),
         projectList.appendChild(div);
-      });
-      openNewWindow();
+    });
+    openNewWindow();
   }
   async function getRepos() {
     try {
@@ -118,21 +111,20 @@
   window.addEventListener("resize", onResizeHandler);
   window.addEventListener("click", clickHandler);
 
-  function openNewWindow(href){
+  function openNewWindow(href) {
     const projectData = document.querySelector("#project-list");
-    if(projectData){
-      projectData.addEventListener("click",function(e) {
+    if (projectData) {
+      projectData.addEventListener("click", function(e) {
         const href = e.target.href;
-        if(href){
-            window.open(href,"_blank");
+        if (href) {
+          window.open(href, "_blank");
         }
-      })
+      });
     }
     const contatWaysLiks = document.querySelector(".contact-ways");
-    contatWaysLiks.addEventListener("click",function(e) {
+    contatWaysLiks.addEventListener("click", function(e) {
       const href = e.target.parentElement.href;
-      window.open(href,"_blank");
-    })   
-  };
-
+      window.open(href, "_blank");
+    });
+  }
 })();
