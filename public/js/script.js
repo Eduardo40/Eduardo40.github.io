@@ -123,7 +123,9 @@
     if(projectData){
       projectData.addEventListener("click",function(e) {
         const href = e.target.href;
-        window.open(href,"_blank");
+        if(href){
+            window.open(href,"_blank");
+        }
       })
     }
     const contatWaysLiks = document.querySelector(".contact-ways");
