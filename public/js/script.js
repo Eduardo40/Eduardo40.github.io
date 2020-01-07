@@ -1,10 +1,10 @@
 (function() {
-  function displayProjects(data = []) {
-    const projectList = document.querySelector("#project-list");
-    if (data.length === 0) {
-      projectList.innerHTML = "<h2>No projects loaded...<h2>";
-    }
-    data.forEach(gitProject => {
+  const projectList = document.querySelector("#project-list");
+  initLoadingMessage();
+  let githubRepoProjects = [];
+  function displayProjects() {
+    projectList.innerHTML = "";
+    githubRepoProjects.forEach(gitProject => {
       const div = document.createElement("div");
       div.setAttribute("class", "project"),
         (div.innerHTML = `\n    
@@ -31,6 +31,12 @@
     }
   }
 
+  function initLoadingMessage(){
+    const preLoadMessage = document.createElement("h1");
+    preLoadMessage.textContent = "Loading..."
+    projectList.appendChild(preLoadMessage);
+  }
+
   function setNavbar(e) {
     const mainNav = document.querySelector(".main-nav");
     const dropDownMenu = document.querySelector("#dropdown-menu");
@@ -49,8 +55,9 @@
   }
 
   function setProjects() {
-    getRepos().then(data => {
-      displayProjects(data);
+    getRepos().then(_data => {
+      githubRepoProjects = _data;
+      displayProjects();
     });
   }
 
