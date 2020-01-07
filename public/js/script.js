@@ -86,14 +86,7 @@
     dropDownButton.addEventListener("click", toggleDropdown);
   }
 
-  function addSmoothScrollEvent(e) {
-    e.preventDefault();
-    if (e.target.className.includes("nav-link")) {
-      document
-        .querySelector(e.target.hash)
-        .scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  }
+
   function setYearDate() {
     const spanYear = document.querySelector(".year");
     const date = new Date();
@@ -112,14 +105,9 @@
     setNavbar();
   }
 
-  function clickHandler(e) {
-    addSmoothScrollEvent(e);
-  }
-
   window.addEventListener("load", onloadHandler);
   window.addEventListener("resize", onResizeHandler);
-  window.addEventListener("click", clickHandler);
-
+  
   function openNewWindow(href) {
     const projectData = document.querySelector("#project-list");
     if (projectData) {
