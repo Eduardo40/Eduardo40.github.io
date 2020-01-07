@@ -32,8 +32,8 @@
   }
 
   function initLoadingMessage(){
-    const preLoadMessage = document.createElement("h1");
-    preLoadMessage.textContent = "Loading..."
+    const preLoadMessage = document.createElement("div");
+    preLoadMessage.classList.add("loader");
     projectList.appendChild(preLoadMessage);
   }
 
@@ -57,7 +57,9 @@
   function setProjects() {
     getRepos().then(_data => {
       githubRepoProjects = _data;
-      displayProjects();
+      setTimeout(() =>{ // Just to hhow of stolen spinner...
+        displayProjects();
+      },1500)
     });
   }
 
