@@ -322,9 +322,12 @@ footer i {
   color: #000;
 }
 
-@media (max-width: 2560px){
+@media (min-width: 2560px){
+  body {
+    font-size: x-large;
+  }
   #about-me{
-    padding-top: 5rem;
+    padding-top: 16rem;
   }
 }
 @media (max-width: 768px) {
