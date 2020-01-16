@@ -5,14 +5,15 @@
   function displayProjects() {
     projectList.innerHTML = "";
     githubRepoProjects.forEach(gitProject => {
+      if(gitProject.homepage === "" || gitProject.homepage === null){
+        return;
+      }
       const div = document.createElement("div");
       div.setAttribute("class", "project"),
         (div.innerHTML = `\n    
         <h3><a class='underline' target="_blank" href="${gitProject.html_url}">${gitProject.name}</a></h3>\n
         <p>${ gitProject.description}</p>\n
-        ${gitProject.homepage ? "<br /><a class=\"gold\" target='_blank' href=" + `${gitProject.homepage}` + ">See Live</a>"
-            : ""
-        }`),
+        ${"<br /><a class=\"gold\" target='_blank' href=" + `${gitProject.homepage}` + ">See Live</a>"}`),
         projectList.appendChild(div);
     });
     openNewWindow();

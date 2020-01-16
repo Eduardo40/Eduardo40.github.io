@@ -230,7 +230,7 @@ p:first-child {
 }
 #project-list .project a.gold {
   color: gold;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 #project-list .project a.gray {
   color: #a9a9a9;
@@ -317,6 +317,11 @@ footer i {
 .gold {
   color: gold;
 }
+
+a.gold{
+  font-size: 2px;
+}
+
 .topButton {
   text-decoration: none;
   color: #000;
