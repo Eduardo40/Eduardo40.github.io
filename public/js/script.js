@@ -1,5 +1,16 @@
 (function() {
+  const mainNav = document.querySelector(".main-nav");
+  const dropDownLinks = document.querySelector(".dropdown-links-list");
+  const dropdown = document.querySelector(".dropdown-nav");
+  const dropdownItems = document.querySelector(".dropdown-nav ul");
+  const dropDownMenu = document.querySelector("#dropdown-menu");
+  const dropdownItemsLinks = document.querySelectorAll(".nav-link-s");
   const projectList = document.querySelector("#project-list");
+  const dropDownButton = document.querySelector(".control");
+  const spanYear = document.querySelector(".year");
+  const projectData = document.querySelector("#project-list");
+  const contatWaysLiks = document.querySelector(".contact-ways");
+  
   initLoadingMessage();
   let githubRepoProjects = [];
   function displayProjects() {
@@ -20,7 +31,7 @@
   }
   async function getRepos() {
     try {
-      const req = await fetch("https://api.github.com/users/Eduardo40/repos");
+      const req = await fetch("https://api.github.com/users/sujed/repos");
       const repo = await req.json();
       if (repo) {
         return repo;
@@ -39,9 +50,6 @@
   }
 
   function setNavbar(e) {
-    const mainNav = document.querySelector(".main-nav");
-    const dropDownMenu = document.querySelector("#dropdown-menu");
-    const dropDownButton = document.querySelector(".control");
     if (this.innerWidth <= 768) {
       dropDownButton.classList.remove("hidden");
       mainNav.classList.add("hidden");
@@ -65,10 +73,6 @@
   }
 
   function toggleDropdown() {
-    const dropDownLinks = document.querySelector(".dropdown-links-list");
-    const dropdown = document.querySelector(".dropdown-nav");
-    const dropdownItems = document.querySelector(".dropdown-nav ul");
-    const dropdownItemsLinks = document.querySelectorAll(".nav-link-s");
     dropdownItems.classList.toggle("hidden");
     dropdown.classList.toggle("hideDropDown");
     dropdown.classList.toggle("showDropDown");
@@ -83,13 +87,11 @@
     });
   }
   function dropdownButtonHandler() {
-    const dropDownButton = document.querySelector(".control");
     dropDownButton.addEventListener("click", toggleDropdown);
   }
 
 
   function setYearDate() {
-    const spanYear = document.querySelector(".year");
     const date = new Date();
     const year = date.getFullYear();
     spanYear.textContent = year;
@@ -110,7 +112,6 @@
   window.addEventListener("resize", onResizeHandler);
   
   function openNewWindow(href) {
-    const projectData = document.querySelector("#project-list");
     if (projectData) {
       projectData.addEventListener("click", function(e) {
         const href = e.target.href;
@@ -119,7 +120,6 @@
         }
       });
     }
-    const contatWaysLiks = document.querySelector(".contact-ways");
     contatWaysLiks.addEventListener("click", function(e) {
       const href = e.target.parentElement.href;
       window.open(href, "_blank");
