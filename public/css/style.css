@@ -61,10 +61,11 @@ nav .container-box {
   box-sizing: border-box;
   border: 2px solid #1a518b;
   border-radius: 5px;
-  transition: all 0.3s;
+  transition: all 0.2s;
 }
 .main-nav ul li a:hover {
-  border: 2px solid #fff;
+  border: 2px solid gold;
+  color: gold;
 }
 .control {
   background: #1a518b;
@@ -302,10 +303,14 @@ footer .container-box {
 
 footer a {
   color: beige;
+  text-decoration: none;
 }
-footer i {
-  color: red;
+
+.footer-link:hover {
+  color: gold;
+  text-decoration: underline;
 }
+
 #about-me,
 #projects,
 #skills {
