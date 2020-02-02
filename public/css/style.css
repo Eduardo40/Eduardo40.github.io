@@ -138,7 +138,7 @@ nav .container-box {
 }
 #showcase {
   z-index: 0;
-  background-image: url('../images/code-pic1.jpg');
+  background-image: url("../images/code-pic1.jpg");
   background-size: cover;
   position: relative;
   flex-direction: column;
@@ -169,7 +169,7 @@ p:first-child {
 }
 #showcase .overlay {
   z-index: -1;
-  background: rgba(0, 0, 0, .9);
+  background: rgba(0, 0, 0, 0.9);
   position: absolute;
   height: 100%;
   width: 100%;
@@ -328,11 +328,11 @@ footer a {
   color: #000;
 }
 
-@media (min-width: 2560px){
+@media (min-width: 2560px) {
   body {
     font-size: x-large;
   }
-  #about-me{
+  #about-me {
     padding-top: 16rem;
   }
 }
@@ -344,7 +344,7 @@ footer a {
   }
 
   #about-me {
-    padding-top:0;
+    padding-top: 0;
   }
 
   #showcase .content img {
@@ -352,7 +352,7 @@ footer a {
   }
 
   .image-text {
-    margin-top:20px;
+    margin-top: 20px;
   }
 
   #skill-list {
@@ -390,16 +390,12 @@ footer a {
   }
 }
 
-@media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
   .image-text {
     margin-top: 0px;
   }
 
-  #about-me{
+  #about-me {
     padding-top: 2rem;
   }
 
@@ -409,8 +405,7 @@ footer a {
   }
 }
 
-@media (max-width: 320px){
-
+@media (max-width: 320px) {
 }
 
 .hidden {
@@ -420,14 +415,14 @@ footer a {
   text-align: center;
 }
 .showDropDown {
-  transition: all 0.20s;
+  transition: all 0.2s;
   height: 8.8em;
 }
 .hideDropDown {
-  transition: all 0.20s;
+  transition: all 0.2s;
   height: 0;
 }
-#project-list h3 .underline:hover{
+#project-list h3 .underline:hover {
   text-decoration: underline;
 }
 #project-list .project a.gold:hover {
@@ -445,6 +440,17 @@ footer a {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    background: rgb(26, 30, 86);
+    color: white;
+  }
 }
