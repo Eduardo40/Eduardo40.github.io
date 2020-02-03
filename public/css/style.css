@@ -451,7 +451,7 @@ footer a {
 
 @media (prefers-color-scheme: dark) {
   html {
-    background: rgb(26, 30, 86);
+    background: #121212;
     color: white;
   }
 }
